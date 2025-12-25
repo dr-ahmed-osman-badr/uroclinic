@@ -16,10 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import TemplateView
 from rest_framework.authtoken import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('data/', include('data.urls')),
     path('api-token-auth/', views.obtain_auth_token),
+    path('privacy/', TemplateView.as_view(template_name='privacy_policy.html'), name='privacy-policy'),
 ]
