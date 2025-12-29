@@ -10,6 +10,7 @@ from .serializers import (
     ListOfDaysInwardSerializer
 )
 
+
 class PatientViewSet(viewsets.ModelViewSet):
     queryset = Patient.objects.all()
     serializer_class = PatientSerializer
@@ -45,3 +46,6 @@ class CalenderAppointmentsViewSet(viewsets.ModelViewSet):
 class ListOfDaysInwardViewSet(viewsets.ModelViewSet):
     queryset = List_of_days_inward.objects.all()
     serializer_class = ListOfDaysInwardSerializer
+
+
+
