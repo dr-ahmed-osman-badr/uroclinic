@@ -271,7 +271,7 @@ class Admission(models.Model):
     
     more_care = models.BooleanField(default=False)
 
-    day_pt_discharged = models.DateField(auto_now=False, auto_now_add=False)
+    day_pt_discharged = models.DateField(auto_now=False, auto_now_add=False, null=True, blank=True)
     
     patient = models.ForeignKey(Patient, related_name='admission2patient',on_delete=models.CASCADE)###########
     
