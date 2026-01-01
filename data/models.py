@@ -332,6 +332,7 @@ class Operation(models.Model):
     
         suprapubic = 41, ('Suprapubic')
         catheterfix = 42, ('Catheter fixation')
+        other_operation = 43, ('Other Operation')
         
     class Case_choises(models.IntegerChoices):
         no_op = 0,('No Operation')
@@ -391,6 +392,7 @@ class One_day_inward(models.Model):
     day_nu = models.IntegerField()
     post_op_day_nu = models.IntegerField(default=0)
     bed_in_depart = models.BooleanField(default=True)########
+    round_done = models.BooleanField(default=True)########
     if_outside_where = models.CharField(max_length=200, default='',null=True, blank=True)###########
     
     catheter_amount =  models.TextField( default='',null=True, blank=True)
