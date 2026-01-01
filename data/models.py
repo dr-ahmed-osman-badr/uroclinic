@@ -392,7 +392,7 @@ class One_day_inward(models.Model):
     day_nu = models.IntegerField()
     post_op_day_nu = models.IntegerField(default=0)
     bed_in_depart = models.BooleanField(default=True)########
-    round_done = models.BooleanField(default=True)########
+    round_done = models.BooleanField(default=False)########
     if_outside_where = models.CharField(max_length=200, default='',null=True, blank=True)###########
     
     catheter_amount =  models.TextField( default='',null=True, blank=True)
